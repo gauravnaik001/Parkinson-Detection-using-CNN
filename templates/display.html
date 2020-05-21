@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <title>Detect Parkinson's using CNN</title>
+        <style>
+            .jumbotron
+				{
+					color:#2c3e50;
+					background:#ecf8f1;
+					padding-left: 20px;
+				}
+			.container h2
+				{
+					padding-left: 35%;
+				}
+			.navbar-inverse
+				{
+					background:#2c3e58;
+				}
+			.navbar-inverse .navbar-brand
+				{
+					color:white;
+				}
+			.navbar-inverse .navbar-nav>li>a
+				{
+					color:white;
+				}
+			body
+				{
+					padding-top:70px;
+				}
+
+            table, td, th {  
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 75%;
+            }
+
+            th, td {
+                padding: 15px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <a href="/about" class="navbar-brand">About Project</a>
+              </div>
+              <div class="collapse navbar-collapse" id="ba-nav-demo">
+                <ul class="nav navbar-nav">
+                  <li> <a href="/dataset"> Sample Dataset Images </a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <br>
+        <div class="row">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1> <center> Patient Log </center> </h1>
+                </div>
+
+                <center>
+                    <table border="2">
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Patient Age</th>
+                            <th>Patient Gender</th>
+                            <th>Result </th>
+                        </tr>
+                    
+                        {% for row in range(details) %}
+                            <tr>
+                                {% for column in range(4) %}
+                                <td> {{ data[row][column] }} </td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </center>
+                <br> <br>
+            </div>
+        </div>
+
+    </body>
+</html>
+

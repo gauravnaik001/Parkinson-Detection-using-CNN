@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<title>Detect Parkinson's using CNN</title>
+		<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+		<!-- <script type="text/javascript" src="Access/JS/Lib/jquery-3.5.1.min.js"></script> -->
+		<!-- <script type="text/javascript" src="Access/JS/Lib/jquery-3.5.1.min.js"></script> -->
+
+		<style>
+			.jumbotron
+				{
+					color:#2c3e50;
+					background:#ecf8f1;
+					padding-left: 20px;
+				}
+			.container h2
+				{
+					padding-left: 35%;
+				}
+			.navbar-inverse
+				{
+					background:#2c3e58;
+				}
+			.navbar-inverse .navbar-brand
+				{
+					color:white;
+				}
+			.navbar-inverse .navbar-nav>li>a
+				{
+					color:white;
+				}
+			body
+				{
+					padding-top:70px;
+				}
+
+		</style>
+	</head>
+
+	<body>
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	    	<div class="container">
+				<div class="navbar-header">
+					<a href="/about" class="navbar-brand">About Project</a>
+				</div>
+				<div class="collapse navbar-collapse" id="ba-nav-demo">
+					<ul class="nav navbar-nav">
+						<li> <a href="/dataset"> Sample Dataset Images </a></li>
+					</ul>
+					<ul class=" nav navbar-nav navbar-right">
+						<li><a href="#">Login</a></li>
+						<li><a href="/register">Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<br>
+		<div class="row">
+			<div class="container">
+				<div class="jumbotron">
+					<h1> <center> Login </center> </h1>
+				</div>
+			
+				<form method="post">
+
+					<div class="form-group" >
+						<label for="username">Enter your Username </label>
+						<input type="text" class="form-control" id="username" name="username" aria-describedby="username" required>
+					</div>
+					<br> 
+					<div class="form-group">
+						<label for="password">Enter your Password</label>
+						<input type="password" class="form-control" id="password" name="password" required>
+					</div>
+					<br> 
+					<center> <button type="submit" class="btn btn-primary">Submit</button> </center>
+
+				</form>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/3.3.5/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/3.3.5/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

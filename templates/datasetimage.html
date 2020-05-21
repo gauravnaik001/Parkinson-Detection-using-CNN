@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<title>Detect Parkinson's using CNN</title>
+		<style>
+			.jumbotron
+				{
+					color:#2c3e50;
+					background:#ecf8f1;
+					padding-left: 20px;
+				}
+			.container h2
+				{
+					padding-left: 35%;
+				}
+				.navbar-inverse
+				{
+					background:#2c3e58;
+				}
+			.navbar-inverse .navbar-brand
+				{
+					color:white;
+				}
+			.navbar-inverse .navbar-nav>li>a
+				{
+					color:white;
+				}	
+			body
+				{
+					padding-top:70px;
+				}
+		</style>
+	</head>
+
+	<body>
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">					
+					<a href="/about" class="navbar-brand">About Project</a>
+				</div>
+				<div class="collapse navbar-collapse" id="ba-nav-demo">
+					<ul class="nav navbar-nav">
+						<li> <a href="#"> Sample Dataset Images </a></li>
+					</ul>
+					<ul class=" nav navbar-nav navbar-right">
+						<li><a href="/login">Login</a></li>
+						<li><a href="/register">Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<br>
+		<div class="row">
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Healthy Individual Drawing</h1>
+				</div>
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H3.jpg' )  }} " width="200px" height="200px"> </div>
+				</div>
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H1.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+				
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H3.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+				
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H7.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+			
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H8.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+		
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H10.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+				
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H11.jpg' )  }} "width="200px" height="200px"> </div>
+				</div> 
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H1.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Parkinson Patient Drawing</h1> 
+				</div>
+			
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P28.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+					
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P18.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P24.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+			
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H8.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+					
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P24.jpg' )  }} " width="200px" height="200px">   </div>
+				</div>
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-H7.jpg' )  }} "width="200px" height="200px"> </div>
+				</div>
+
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P16.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+				
+				<div class="col-lg-3 col-xs-6">
+				<div class="thumbnail"> <img src=" {{ url_for('static', filename = 'images/sp1-P24.jpg' )  }} " width="200px" height="200px" > </div>
+				</div>
+				
+	
+			</div>
+		</div>
+
+		
+		<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/3.3.5/js/bootstrap.min.js"></script>	
+	</body>
+</html>

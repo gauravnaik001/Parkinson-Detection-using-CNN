@@ -1,0 +1,203 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <title>Detect Parkinson's using CNN</title>
+        <style>
+                .jumbotron
+                  {
+                    color:#2c3e50;
+                    background:#ecf8f1;
+                    padding-left: 20px;
+                  }
+                .container h2
+                  {
+                    padding-left: 35%;
+                  }
+                .navbar-inverse
+                  {
+                    background:#2c3e58;
+                  }
+                .navbar-inverse .navbar-brand
+                  {
+                    color:white;
+                  }
+                .navbar-inverse .navbar-nav>li>a
+                  {
+                    color:white;
+                  }
+                body
+                  {
+                    padding-top:70px;
+                  }
+
+                input[type=text], select {
+                  width: 100%;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  resize: vertical;
+                }
+
+                .for_file {
+                  width: 100%;
+                  padding: 10px;
+                  resize: vertical;
+                }
+
+                label {
+                  padding: 12px 12px 12px ;
+                  display: inline-block;
+                  font-size : 20px ;
+                  font-weight : bold;
+                }
+                
+                input[type=submit] {
+                  background-color: green;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  
+                }
+                
+                input[type=submit]:hover {
+                  background-color: lightseagreen;
+                }
+
+                input[type=reset] {
+                  background-color: green;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+
+                input[type=reset]:hover {
+                  background-color: lightseagreen;
+                }
+                
+                .col-25 {
+                  float: left;
+                  width: 25%;
+                  margin-top: 0px;
+                }
+                
+                .col-75 {
+                  float: left;
+                  width: 75%;
+                  margin-top: 0px;
+                }
+                
+                /* Clear floats after the columns */
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+
+        </style>       
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="/about" class="navbar-brand">About Project</a>
+            </div>
+            <div class="collapse navbar-collapse" id="ba-nav-demo">
+              <ul class="nav navbar-nav">
+                <li> <a href="/dataset"> Sample Dataset Images </a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <br>
+        <div class="row">
+          <div class="container">
+            <div class="jumbotron">
+              <h1> <center> Enter Patient Data </center> </h1>
+            </div>
+
+            <form action = "{{ url_for('result')  }}" method="post" enctype="multipart/form-data">
+                
+              <div class="row">
+                  <div class="col-25">
+                      <label>
+                      Enter patient name: 
+                      </label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" id="name" name="name" placeholder="name" required> <br> <br>    
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-25">
+                      <label>
+                      Enter patient age: 
+                      </label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" id="age" name="age" placeholder="age" required> <br> <br>    
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-25">
+                      <label>
+                      Select patient gender: 
+                      </label>
+                  </div>
+                  <div class="col-75">
+                      <select id="gender" name="gender" placeholder="gender" required>
+                          <option value="male">male</option>
+                          <option value="female">female</option>
+                          <option value="other">other</option>
+                      </select>   
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-25">
+                      <label>
+                      Select spiral image:  <br>
+                      </label>
+                  </div>
+                  <div class="col-75">
+                      <div class="for_file">
+                          <input type="file" id="spiral_image" name="spiral_image" accept="image/*" required> <br> <br> 
+                      </div>        
+                  </div>
+              </div>
+              
+              <div class="row">
+                  <div class="col-25">
+                      <label>
+                      Select meander image:  <br>
+                      </label>
+                  </div>
+                  <div class="col-75">
+                      <div class= "for_file">
+                          <input type="file" id="meander_image" name="meander_image" accept="image/*" required> <br> <br> 
+                      </div>
+                  </div>
+              </div>
+              
+              <center>
+                  <div class="row">
+                      <button type="submit" class="btn btn-primary">Submit</button>  
+                      &nbsp; &nbsp; &nbsp;
+                      <button type="reset" class="btn btn-primary">Reset</button>
+                  </div>
+              </center>
+      
+            </form>
+            
+          </div>
+        </div>
+  
+    </body>
+</html>
